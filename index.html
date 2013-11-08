@@ -113,6 +113,13 @@
       <hr/>
     </div>
 
+    <div class="container landing-section how-content">
+      <div class="row">
+        <div class="col-md-12">
+          <h2 class="section-heading">How does Una work?</h2>
+        </div>
+      </div>
+    </div>
     
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -123,17 +130,21 @@
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
     <script>
       $(document).ready(function() {
-        var animations = ['bounceInLeft', 'bounceInUp', 'bounceInDown', 'bounceInRight'];
-        $.map($('.iphone-small'), function(el, idx) {
-          setTimeout(function() {
-            $(el).addClass('animated').addClass(animations[idx]);
-          }, idx * 400);
-        });
-        $.map($('.player-row i'), function(el, idx) {
-          setTimeout(function() {
-            $(el).addClass('animated bounceIn');
-          }, idx * 400 + 1000);
-        });
+        $('.banner-picture-image').addClass('animated fadeIn');
+        setTimeout(function() {
+          var animations = ['bounceInLeft', 'bounceInUp', 'bounceInDown', 'bounceInRight'];
+          $.map($('.iphone-small'), function(el, idx) {
+            setTimeout(function() {
+              $(el).addClass('animated').addClass(animations[idx]);
+            }, idx * 400);
+          });
+          $.map($('.player-row i'), function(el, idx) {
+            setTimeout(function() {
+              $(el).addClass('animated bounceIn');
+            }, idx * 400 + 800);
+          });
+        }, 500);
+
         var why_animation_shown = false;
         $('.why-content').waypoint(function(direction) {
           why_animation_shown = true;
