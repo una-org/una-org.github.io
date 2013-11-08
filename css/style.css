@@ -1,7 +1,9 @@
 /* General CSS */
 body, h1, h2, h3, h4, h5, h6 { font-family: "aktiv-grotesk-std", sans-serif; }
 h1, h2, h3, h4, h5, h6 { font-weight: 300; }
-p { font-weight: 200; font-size: 1.3em; color: #666; }
+p { font-weight: 300; font-size: 1.3em; color: #666; }
+.btn-default { border: none; }
+.btn-default:hover { border: none; }
 
 /* Navigation */
 .navbar-inverse { background-color: #fff; border: none; }
@@ -13,7 +15,14 @@ p { font-weight: 200; font-size: 1.3em; color: #666; }
 .navbar-toggle { margin-top: 15px; }
 .navbar-inverse .navbar-toggle .icon-bar { background-color: red; }
 
-.banner { margin-top: 48px; height: 400px; background-image: url('../img/banner.jpg'); background-size: cover; background-position: center bottom; }
+.banner { margin-top: 48px; height: 400px; background-image: url('../img/banner.jpg'); background-size: cover; background-position: center bottom; color: #fff; }
+.banner .banner-text { padding-top: 60px; }
+.banner h1 {  font-weight: 300; font-size: 4.5em; margin-bottom: 30px; }
+.banner-text p { color: #fff; font-weight: 300; margin-bottom: 30px; }
+.banner-picture-section { padding-top: 20px; text-align: center; }
+.banner-picture-image { width: 400px; }
+.banner .iphone-small { position: relative; width: 60px; margin: 0 35px; top: -120px; opacity: 0; }
+.banner .display-container { position: relative; }
 
 .landing-section { text-align: center; padding-top: 40px; }
 .landing-section .section-heading { font-size: 2.5em; margin-bottom: 30px; }

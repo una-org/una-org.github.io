@@ -15,6 +15,7 @@
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/vendor/modernizr-2.6.2.min.js"></script>
@@ -53,7 +54,23 @@
     </header>
     <div class="banner">
       <div class="container">
-        
+        <div class="row">
+          <div class="col-xs-12 col-md-6 banner-text">
+            <h1>Interaction at your fingertips.</h1>
+            <p>Create cross-display interactive apps easily with Una today!</p>
+            <button type="button" class="btn btn-default btn-lg">Get Started</button>
+          </div>
+          <div class="col-xs-12 col-md-6 banner-picture-section">
+            <div class="display-container">
+              <img src="img/imac.png" class="banner-picture-image" />
+            </div>
+            <div class="clearfix"></div>
+            <img src="img/iphone-small.png" class="iphone-small" />
+            <img src="img/iphone-small.png" class="iphone-small" />
+            <img src="img/iphone-small.png" class="iphone-small" />
+            <img src="img/iphone-small.png" class="iphone-small" />
+          </div>
+        </div>
       </div>
     </div>
     <div class="container landing-section">
@@ -95,7 +112,16 @@
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
-
+    <script>
+      $(document).ready(function() {
+        var animations = ['fadeInLeftBig', 'fadeInUpBig', 'fadeInDownBig', 'fadeInRightBig'];
+        $.map($('.iphone-small'), function(el, idx) {
+          setTimeout(function() {
+            $(el).addClass('animated').addClass(animations[idx]);
+          }, idx * 400);
+        });
+      });
+    </script>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
         (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
