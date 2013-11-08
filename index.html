@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/vendor/modernizr-2.6.2.min.js"></script>
   </head>
@@ -63,6 +64,12 @@
           <div class="col-xs-12 col-md-6 banner-picture-section">
             <div class="display-container">
               <img src="img/imac.png" class="banner-picture-image" />
+              <p class="player-row">
+                <i class="fa fa-user fa-2x"></i>
+                <i class="fa fa-user fa-2x"></i>
+                <i class="fa fa-user fa-2x"></i>
+                <i class="fa fa-user fa-2x"></i>
+              </p>
             </div>
             <div class="clearfix"></div>
             <img src="img/iphone-small.png" class="iphone-small" />
@@ -87,17 +94,17 @@
         <div class="col-md-12">
           <h2 class="section-heading">Why use Una?</h2>
           <div class="col-xs-12 col-sm-4">
-            <img src="img/cross-display.jpg"/>
+            <img src="img/cross-display.jpg" class="why-content-img"/>
             <h4>Cross-display Interaction</h4>
             <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
           </div>
           <div class="col-xs-12 col-sm-4">
-            <img src="img/html5-logo.png" />
+            <img src="img/html5-logo.png" class="why-content-img"/>
             <h4>Built for the Web</h4>
             <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
           </div>
           <div class="col-xs-12 col-sm-4">
-            <img src="img/gears.jpg" />
+            <img src="img/gears.jpg" class="why-content-img"/>
             <h4>Easy Integration</h4>
             <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
           </div>
@@ -105,21 +112,33 @@
       </div>
       <hr/>
     </div>
+
     
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+    <script src="js/vendor/waypoints.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
     <script>
       $(document).ready(function() {
-        var animations = ['fadeInLeftBig', 'fadeInUpBig', 'fadeInDownBig', 'fadeInRightBig'];
+        var animations = ['bounceInLeft', 'bounceInUp', 'bounceInDown', 'bounceInRight'];
         $.map($('.iphone-small'), function(el, idx) {
           setTimeout(function() {
             $(el).addClass('animated').addClass(animations[idx]);
           }, idx * 400);
         });
+        $.map($('.player-row i'), function(el, idx) {
+          setTimeout(function() {
+            $(el).addClass('animated bounceIn');
+          }, idx * 400 + 1000);
+        });
+        var why_animation_shown = false;
+        $('.why-content').waypoint(function(direction) {
+          why_animation_shown = true;
+          $('.why-content-img').addClass('animated fadeInUp');
+        }, { offset: $(window).height() - 300 });
       });
     </script>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
