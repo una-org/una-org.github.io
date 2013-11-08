@@ -15,30 +15,34 @@ p { font-weight: 300; font-size: 1.3em; color: #666; }
 .navbar-toggle { margin-top: 15px; }
 .navbar-inverse .navbar-toggle .icon-bar { background-color: red; }
 
-.banner { margin-top: 48px; height: 400px; background-image: url('../img/banner.jpg'); background-size: cover; background-position: center bottom; color: #fff; }
-.banner .banner-text { padding-top: 40px; }
+.banner { margin-top: 48px; background-image: url('../img/banner.jpg'); background-size: cover; background-position: center bottom; color: #fff; }
+.banner .banner-text { padding-top: 40px; padding-bottom: 40px;}
 .banner h1 {  font-weight: 300; font-size: 4.5em; margin-bottom: 30px; }
 .banner-text p { color: #fff; font-weight: 300; margin-bottom: 30px; }
 .banner-picture-section { padding-top: 30px; text-align: center; }
 .banner .display-container { position: relative; }
-.banner-picture-image { width: 380px; opacity: 0; 
+.banner-picture-image { width: 380px; opacity: 0; margin-top: 40px;
 	-webkit-animation-delay: 0.5s;
 	   -moz-animation-delay: 0.5s;
 	     -o-animation-delay: 0.5s;
 	        animation-delay: 0.5s;
 }
-
-@media (max-width: 1023px) {
-	.banner-picture-section { display: none; }
-}
-
-@media (max-width: 600px) {
-	.banner h1 { font-size: 3.5em; }
-}
-
-.banner .iphone-small { position: relative; width: 60px; margin: 0 20px; top: -80px; opacity: 0; }
+.banner .iphone-small { position: relative; width: 60px; margin: 0 20px; opacity: 0; }
 .banner .player-row { position: absolute; top: 160px; text-align: center; width: 100%; }
 .banner .player-row i.fa-user { color: red; margin: 0 20px; opacity: 0; }
+.banner .phone-row { position: absolute; top: 270px; text-align: center; width: 100%; }
+@media (max-width: 450px) {
+	.banner-picture-image { width: 300px; }
+	.banner .phone-row { top: 200px; }
+	.banner .banner-text { padding-top: 0; }
+	.banner .iphone-small { width: 45px; margin: 0 10px; }
+}
+
+@media (max-width: 1000px) {
+	.banner-picture-section { padding-bottom: 20px; }
+	.banner h1 { font-size: 3.5em; }
+	.banner { text-align: center; }
+}
 
 .landing-section { text-align: center; padding-top: 40px; }
 .landing-section .section-heading { font-size: 2.5em; margin-bottom: 30px; }
