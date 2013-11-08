@@ -1,0 +1,23 @@
+/* General CSS */
+body, h1, h2, h3, h4, h5, h6 { font-family: "aktiv-grotesk-std", sans-serif; }
+h1, h2, h3, h4, h5, h6 { font-weight: 300; }
+p { font-weight: 200; font-size: 1.3em; color: #666; }
+
+/* Navigation */
+.navbar-inverse { background-color: #fff; border: none; }
+.navbar-inverse .navbar-nav > li > a { color: #000; text-shadow: 0px 1px #eee;}
+.navbar-inverse .navbar-nav > li > a:hover { color: red; } 
+.navbar-brand { padding: 1px 30px 0; }
+.nav > li > a { padding-left: 25px; padding-right: 25px; }
+.navbar-nav > li > a { padding-top: 20px; }
+.navbar-toggle { margin-top: 15px; }
+.navbar-inverse .navbar-toggle .icon-bar { background-color: red; }
+
+.banner { margin-top: 48px; height: 400px; background-image: url('../img/banner.jpg'); background-size: cover; background-position: center bottom; }
+
+.landing-section { text-align: center; padding-top: 40px; }
+.landing-section .section-heading { font-size: 2.5em; margin-bottom: 30px; }
+
+.why-content img { margin: 30px; height: 100px; }
+.why-content h4 { color: red; text-transform: uppercase; font-weight: 500; font-size: 1em; letter-spacing: 1px; }
+.why-content p { font-size: 1em; }
