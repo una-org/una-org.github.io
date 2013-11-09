@@ -6,7 +6,11 @@ p { font-weight: 300; font-size: 1.3em; color: #666; }
 .btn-default:hover { border: none; }
 
 /* Navigation */
-.navbar-inverse { background-color: #fff; border: none; }
+.navbar-inverse { background-color: #fff; border: none; 
+-webkit-box-shadow: 0px 0px 9px 4px rgba(41,41,41,0.1);
+-moz-box-shadow: 0px 0px 9px 4px rgba(41,41,41,0.1);
+box-shadow: 0px 0px 9px 4px rgba(41,41,41,0.1);
+}
 .navbar-inverse .navbar-nav > li > a { color: #000; text-shadow: 0px 1px #eee;}
 .navbar-inverse .navbar-nav > li > a:hover { color: red; } 
 .navbar-brand { padding: 1px 30px 0; }
@@ -15,7 +19,7 @@ p { font-weight: 300; font-size: 1.3em; color: #666; }
 .navbar-toggle { margin-top: 15px; }
 .navbar-inverse .navbar-toggle .icon-bar { background-color: red; }
 
-.banner { margin-top: 48px; background-image: url('../img/banner.jpg'); background-size: cover; background-position: center bottom; color: #fff; }
+.banner { margin-top: 48px; background-image: url('../img/banner.jpg'); background-attachment: fixed; background-size: cover; background-position: 50% 0; color: #fff; }
 .banner .banner-text { padding-top: 40px; padding-bottom: 40px;}
 .banner h1 {  font-weight: 300; font-size: 4.5em; margin-bottom: 30px; }
 .banner-text p { color: #fff; font-weight: 300; margin-bottom: 30px; }
