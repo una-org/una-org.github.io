@@ -4,6 +4,9 @@ h1, h2, h3, h4, h5, h6 { font-weight: 300; }
 p { font-weight: 300; font-size: 1.3em; color: #666; }
 .btn-default { border: none; }
 .btn-default:hover { border: none; }
+[class*="col-"] { padding-top: 15px; padding-bottom: 15px; }
+a { color: red; }
+a:hover { color: #D80404; }
 
 /* Navigation */
 .navbar-inverse { background-color: #fff; border: none; 
@@ -19,7 +22,64 @@ box-shadow: 0px 0px 9px 4px rgba(41,41,41,0.1);
 .navbar-toggle { margin-top: 15px; }
 .navbar-inverse .navbar-toggle .icon-bar { background-color: red; }
 
-.page-content-container { margin-top: 48px; }
+/* Affix */
+
+@media (min-width: 1200px) {
+
+  .affix, .affix-bottom {
+    width: 263px !important;
+    position: fixed !important;
+    top: 74px !important;
+  }
+  .col-md-9 h1:first-child {
+    margin-top: 40px !important;
+  }
+}
+
+@media (min-width: 992px) {
+
+  .affix, .affix-bottom {
+    width: 213px;
+  }
+  .affix {
+    position: fixed !important;
+  }
+  .col-md-9 h1:first-child {
+    margin-top: 40px !important;
+  }
+}
+
+@media (min-width: 768px) {
+
+  .affix {
+    position: static;
+  }
+  .col-md-9 h1:first-child {
+    margin-top: 0px;
+  }
+}
+
+@media (min-width: 480px) {
+
+  .affix {
+    position: static;
+  }
+  .col-md-9 h1:first-child {
+    margin-top: 0px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .affix {
+    position: static;
+  }
+  .col-md-9 h1:first-child {
+    margin-top: 0px;
+  }
+}
+
+.page-content-container { margin-top: 64px; }
 
 .banner { background-image: url('../img/banner.jpg'); background-attachment: fixed; background-size: cover; background-position: 50% 0; color: #fff; }
 .banner .banner-text { padding-top: 40px; padding-bottom: 40px; opacity: 0; }
