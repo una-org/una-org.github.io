@@ -159,6 +159,12 @@
           why_animation_shown = true;
           $('.why-content-img').addClass('animated fadeInUp');
         }, { offset: $(window).height() - 200 });
+
+        $(window).focus(function() {
+          // scroll to top when focus.
+          // to get around the chrome rendering bug
+          $(window).scrollTop(0);
+        });
       });
     </script>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
