@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="img/favicon.png">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/vendor/modernizr-2.6.2.min.js"></script>
   </head>
@@ -36,7 +37,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a href="index.html" class="navbar-brand"><img src="img/logo.png" width="125"/></a>
+          <a href="index.html" class="navbar-brand"><img class="logo" src="img/logo.png" width="100"/></a>
         </div>
         <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
           <ul class="nav navbar-nav">
@@ -79,7 +80,7 @@
             <div class="col-xs-12 col-md-6 banner-text">
               <h1>Real-time Interactions <br/>Made Easy</h1>
               <p>Create a real-time multi-user interactive application with Una today!</p>
-              <button type="button" class="btn btn-default btn-lg">Get Started</button>
+              <button type="button" class="btn btn-warning btn-lg">Get Started</button>
             </div>
           </div>
         </div>
@@ -88,8 +89,9 @@
       <div class="container landing-section">
         <div class="row">
           <div class="col-md-8 col-md-offset-2">
+            <img src="img/ninja.png" width="200"/>
             <h2 class="section-heading">What is Una?</h2>
-            <p>Una is a <strong>free and open source</strong> Javascript library that allows developers to create interactive applications where multiple users can interact with large central displays in real-time.</p>
+            <p>Una is a <strong>free and open source</strong> Javascript library that allows developers to create interactive applications where multiple users can interact with large central displays in real-time using mobile devices.</p>
           </div>
         </div>
         <hr/>
@@ -101,18 +103,18 @@
             <h2 class="section-heading">Why use Una?</h2>
             <div class="col-xs-12 col-sm-4">
               <img src="img/cross-display.jpg" class="why-content-img"/>
-              <h4>Create an Interactive Platform</h4>
-              <p>Una makes it easy for you to create interactive cross-display applications where users can interact with a large display using their mobile devices.</p>
+              <h4>Cross-display Interaction</h4>
+              <p>Una makes it easy for you to create interactive cross-display applications where users can interact with large displays using their mobile devices.</p>
             </div>
             <div class="col-xs-12 col-sm-4">
               <img src="img/html5-logo.png" class="why-content-img"/>
               <h4>Built for the Web</h4>
-              <p>Entirely web-based, no need to download any application from the app store; your web browser is the only app you need. No special hardware needed</p>
+              <p>Entirely web-based, no need to download any application from the app store; your web browser is the only app you need. No special hardware needed.</p>
             </div>
             <div class="col-xs-12 col-sm-4">
               <img src="img/gears.jpg" class="why-content-img"/>
               <h4>Easy Integration</h4>
-              <p>Una handles the server-side for you, you only need to work on client-side code. Frees you up from working with low-level transport mechanism so you can focus on making kick-ass applications.</p>
+              <p>Una handles the server-side for you, you only need to work on client-side code. This frees you up from working with low-level transport mechanism so you can focus on making your kick-ass applications.</p>
             </div>
           </div>
         </div>
@@ -121,12 +123,25 @@
 
       <div class="container landing-section how-content">
         <div class="row">
-          <div class="col-md-12">
-            <h2 class="section-heading">How does Una work?</h2>
+          <div class="col-md-8 col-md-offset-2">
+            <h2 class="section-heading">What's Next?</h2>
+            <p>Easy, <strong><a>get started</a></strong> with your new Una project, read up on the <strong><a>documentation</a></strong> or support our growing community of followers over on <strong><a>github</a></strong>.</p>
+            <br/>
+            <button type="button" class="btn btn-warning btn-lg">Get Started</button>
+            <br/><br/><br/><br/>
           </div>
         </div>
       </div>
     </div>
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <p>&copy; 2013 Una Project. </p>
+          </div>
+        </div>
+      </div>
+    </footer>
     
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -163,7 +178,7 @@
         $(window).focus(function() {
           // scroll to top when focus.
           // to get around the chrome rendering bug
-          $(window).scrollTop(0);
+          // $(window).scrollTop(0);
         });
       });
     </script>
