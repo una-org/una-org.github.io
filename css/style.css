@@ -11,6 +11,9 @@ a {color: #1175a5; }
 a:hover { color: #23a5e5; }
 footer { background-color: #23a5e5; text-align: center;}
 footer p { color: #fff; }
+.btn a { color: #000;}
+.btn a:hover { color: #fff; text-decoration: none; }
+
 /* Navigation */
 .navbar-inverse { background-color: #fff; border: none; 
 -webkit-box-shadow: 0px 0px 9px 4px rgba(41,41,41,0.1);
